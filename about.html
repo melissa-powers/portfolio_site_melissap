@@ -14,80 +14,93 @@
 
   <!-- Header Section -->
   <header>
-    <a href="index.html"><img src="img/portfolio_logo_small.png" alt="Melissa Powers Creative Designs logo" height="80"></a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#connect">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <a href="index.html"><img src="img/portfolio_logo_small.png" alt="Melissa Powers Creative Designs logo" height="80"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#connect">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
 
     <!-- About Hero -->
     <section id="about">
-      <h1>About Me</h1>
+      <div class="container">
+        <h1>About Me</h1>
 
-      <!-- Profile Image -->
-      <picture>
-        <source srcset="img/self_small.png" media="(max-width: 767px)">
-        <img src="img/self_large.png" alt="A photo of Melissa Powers">
-      </picture>
+        <!-- Profile Image -->
+        <picture>
+          <source srcset="img/self_small.png" media="(max-width: 767px)">
+          <img src="img/self_large.png" alt="A photo of Melissa Powers">
+        </picture>
 
-      <!-- My Story -->
-      <h2>My Story</h2>
-      <p>I'm Melissa Powers, a UI/UX Designer focused on crafting calm, inviting experiences that bring comfort and clarity to everyday interactions. I believe that good design should feel effortless — guiding people naturally through each moment without adding stress or confusion.</p>
-      <p>My journey into design started with a love for problem-solving and empathy for the people using the products I help create. I'm drawn to projects that make a real difference in people's daily lives, especially in health, wellness, and accessibility.</p>
+        <!-- My Story -->
+        <h2>My Story</h2>
+        <p>I'm Melissa Powers, a UI/UX Designer focused on crafting calm, inviting experiences that bring comfort and clarity to everyday interactions. I believe that good design should feel effortless — guiding people naturally through each moment without adding stress or confusion.</p>
+        <p>My journey into design started with a love for problem-solving and empathy for the people using the products I help create. I'm drawn to projects that make a real difference in people's daily lives, especially in health, wellness, and accessibility.</p>
 
-      <!-- CV Link -->
-      <a href="files/Melissa_Powers_Resume.pdf" target="_blank" class="btn btn-primary">View CV</a>
+        <!-- CV Link -->
+        <a href="files/Melissa_Powers_Resume.pdf" target="_blank" class="btn btn-primary">View CV</a>
+      </div>
     </section>
 
     <!-- Skills & Tools Section -->
     <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <h2>Skills</h2>
+            <ul>
+              <li>User Research</li>
+              <li>Usability Testing</li>
+              <li>Wireframing (Low & Mid-Fidelity)</li>
+              <li>Prototyping (Low to High Fidelity)</li>
+              <li>Information Architecture</li>
+              <li>User Flows & Journey Mapping</li>
+              <li>Persona Development</li>
+              <li>Interaction Design</li>
+              <li>UX Strategy</li>
+            </ul>
+          </div>
 
-      <h2>Skills</h2>
-      <ul>
-        <li>User Research</li>
-        <li>Usability Testing</li>
-        <li>Wireframing (Low & Mid-Fidelity)</li>
-        <li>Prototyping (Low to High Fidelity)</li>
-        <li>Information Architecture</li>
-        <li>User Flows & Journey Mapping</li>
-        <li>Persona Development</li>
-        <li>Interaction Design</li>
-        <li>UX Strategy</li>
-      </ul>
-
-      <h2>Tools</h2>
-      <ul>
-        <li>Figma</li>
-        <li>Adobe XD</li>
-        <li>Sketch</li>
-        <li>InVision</li>
-        <li>HTML & CSS</li>
-        <li>Adobe Creative Suite</li>
-      </ul>
-
+          <div class="col-2">
+            <h2>Tools</h2>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>Sketch</li>
+              <li>InVision</li>
+              <li>HTML & CSS</li>
+              <li>Adobe Creative Suite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Let's Connect Section -->
     <section id="connect">
-      <h2>Let's Connect!</h2>
-      <p>Want to work together? <a href="mailto:Melissa.plohetski@gmail.com">Contact me</a> and I'll get back to you asap!</p>
+      <div class="container">
+        <h2>Let's Connect!</h2>
+        <p>Want to work together? <a href="mailto:Melissa.plohetski@gmail.com">Contact me</a> and I'll get back to you asap!</p>
+      </div>
     </section>
 
   </main>
   <footer>
-    <p>Get in touch:</p>
-    <a href="tel:+15124154055">+1 (512) 415-4055</a>
+    <div class="container">
+      <p>Get in touch:</p>
+      <a href="tel:+15124154055">+1 (512) 415-4055</a>
 
-    <p><a href="mailto:Melissa.plohetski@gmail.com" class="btn btn-primary">Email Me</a></p>
+      <p><a href="mailto:Melissa.plohetski@gmail.com" class="btn btn-primary">Email Me</a></p>
 
-    <!-- Social Media Icons -->
-    <ul class="social-links">
+      <!-- Social Media Icons -->
+      <ul class="social-links">
       <li>
         <a href="https://www.linkedin.com/in/melissa-plohetski-795b191b9/" target="_blank">
           <!-- LinkedIn SVG Icon -->
@@ -106,7 +119,8 @@
       </li>
     </ul>
 
-    <p>&copy; 2026 Melissa Powers. All rights reserved.</p>
+      <p>&copy; 2026 Melissa Powers. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>

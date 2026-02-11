@@ -14,58 +14,72 @@
 
   <!-- Header Section -->
   <header>
-    <a href="index.html"><img src="img/portfolio_logo_small.png" alt="Melissa Powers Creative Designs logo" height="80"></a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#connect">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <a href="index.html"><img src="img/portfolio_logo_small.png" alt="Melissa Powers Creative Designs logo" height="80"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#connect">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
 
     <!-- Hero Section -->
     <section id="hero">
-      <h1>Hello! I'm Melissa Powers</h1>
-      <p>I'm a UI/UX Designer focused on crafting calm, inviting experiences that bring comfort and clarity to everyday interactions.</p>
+      <div class="container">
+        <h1>Hello! I'm Melissa Powers</h1>
+        <p>I'm a UI/UX Designer focused on crafting calm, inviting experiences that bring comfort and clarity to everyday interactions.</p>
+      </div>
     </section>
 
     <!-- Work / Projects Section -->
     <section id="work">
-      <h2>My Work</h2>
+      <div class="container">
+        <h2>My Work</h2>
 
-      <!-- Project 1: Olive -->
-      <div>
-        <picture>
-          <source srcset="img/olive_homepage_small.png" media="(max-width: 767px)">
-          <img src="img/olive_homepage_large.png" alt="Olive project preview">
-        </picture>
-        <h3>Olive</h3>
-        <p>Olive is a conceptual health and wellness app designed to simplify how users manage their healthcare in a calm, accessible way.</p>
-        <a href="olive.html" class="btn btn-primary">View Project</a>
+        <div class="row">
+          <!-- Project 1: Olive -->
+          <div class="col">
+            <div class="project-card">
+              <picture>
+                <source srcset="img/olive_homepage_small.png" media="(max-width: 767px)">
+                <img src="img/olive_homepage_large.png" alt="Olive project preview">
+              </picture>
+              <div class="project-content">
+                <h3>Olive</h3>
+                <p>Olive is a conceptual health and wellness app designed to simplify how users manage their healthcare in a calm, accessible way.</p>
+                <a href="olive.html" class="btn btn-primary">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
 
     <!-- Let's Connect Section -->
     <section id="connect">
-      <h2>Let's Connect!</h2>
-      <p>Want to work together? <a href="mailto:Melissa.plohetski@gmail.com">Contact me</a> and I'll get back to you asap!</p>
+      <div class="container">
+        <h2>Let's Connect!</h2>
+        <p>Want to work together? <a href="mailto:Melissa.plohetski@gmail.com">Contact me</a> and I'll get back to you asap!</p>
+      </div>
     </section>
 
   </main>
 
   <!-- Footer Section -->
   <footer>
-    <p>Get in touch:</p>
-    <a href="tel:+15124154055">+1 (512) 415-4055</a>
+    <div class="container">
+      <p>Get in touch:</p>
+      <a href="tel:+15124154055">+1 (512) 415-4055</a>
 
-    <p><a href="mailto:Melissa.plohetski@gmail.com" class="btn btn-primary">Email Me</a></p>
+      <p><a href="mailto:Melissa.plohetski@gmail.com" class="btn btn-primary">Email Me</a></p>
 
-    <!-- Social Media Icons -->
-    <ul class="social-links">
+      <!-- Social Media Icons -->
+      <ul class="social-links">
       <li>
         <a href="https://www.linkedin.com/in/melissa-plohetski-795b191b9/" target="_blank">
           <!-- LinkedIn SVG Icon -->
@@ -84,7 +98,8 @@
       </li>
     </ul>
 
-    <p>&copy; 2026 Melissa Powers. All rights reserved.</p>
+      <p>&copy; 2026 Melissa Powers. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
