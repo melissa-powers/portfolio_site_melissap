@@ -118,11 +118,30 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline effect */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-olive);
+  transition: width 0.4s ease, left 0.4s ease;
 }
 
 nav a:hover {
   color: var(--primary-olive);
   text-decoration: none;
+}
+
+nav a:hover::after {
+  width: 80%;
+  left: 10%;
 }
 
 /* ===================================
@@ -730,13 +749,14 @@ section {
   animation: slideIn 1s ease-out;
 }
 
-/* Optional: Navigation menu animation */
+/* Navigation menu item animation */
 nav li {
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 nav li:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* ===================================
