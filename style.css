@@ -408,8 +408,21 @@ nav li {
   display: block;
 }
 
+.project-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.project-image {
+  padding: 0;
+}
+
 .project-content {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-content h3 {
@@ -798,15 +811,19 @@ nav li:hover {
     font-size: 1.2rem;
   }
 
-  /* Work section - 2 column layout */
-  #work .row {
-    display: flex;
-    flex-wrap: wrap;
+  /* Work section - projects stay stacked on tablet */
+  .project-row {
+    flex-direction: column;
   }
 
-  #work .col {
+  .project-image,
+  .project-content {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .project-content {
+    padding: 2rem;
   }
 
   /* About page - 2 column layout for skills */
@@ -890,16 +907,27 @@ nav li:hover {
     max-width: 800px;
   }
 
-  /* Work section - 2 column layout for projects */
-  #work .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+  /* Work section - projects remain full width but internal layout changes */
+  #work .project-card {
+    margin-bottom: 3rem;
   }
 
-  #work .col {
-    flex: 0 0 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+  /* Project row - 60/40 split on large screens */
+  .project-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .project-image {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0;
+  }
+
+  .project-content {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 3rem;
   }
 
   /* About page - refined layout */
@@ -1026,8 +1054,13 @@ nav li:hover {
     font-size: 1rem;
   }
 
-  /* Work section - single column */
-  #work .col {
+  /* Work section - single column, stacked layout */
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-image,
+  .project-content {
     flex: 0 0 100%;
     max-width: 100%;
   }
