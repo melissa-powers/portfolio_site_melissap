@@ -137,9 +137,11 @@ nav a:hover {
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Primary button - for main CTAs */
@@ -253,6 +255,27 @@ picture img {
   .col-2,
   .col-3,
   .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* 60/40 column split for large screens */
+.col-60 {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 0 1rem;
+}
+
+.col-40 {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .col-60,
+  .col-40 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -589,3 +612,454 @@ li {
 .pb-1 { padding-bottom: 1rem; }
 .pb-2 { padding-bottom: 2rem; }
 .pb-3 { padding-bottom: 3rem; }
+
+/* ===================================
+   ENHANCED TRANSITIONS
+   =================================== */
+
+/* Smooth transitions for all links (not buttons) */
+a:not(.btn) {
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+/* Image hover effects */
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.02);
+}
+
+/* Section transitions */
+section {
+  transition: opacity 0.3s ease;
+}
+
+/* ===================================
+   SVG ANIMATIONS
+   =================================== */
+
+/* SVG illustration section */
+#illustration-section {
+  padding: 4rem 0;
+  background-color: var(--white);
+}
+
+#illustration-section h2 {
+  color: var(--primary-olive);
+  margin-bottom: 1rem;
+}
+
+#illustration-section p {
+  color: var(--dark-gray);
+  font-size: 1.125rem;
+}
+
+/* SVG illustration container */
+.svg-illustration {
+  max-width: 500px;
+  width: 100%;
+  margin: 2rem auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  transition: filter 0.3s ease;
+}
+
+.svg-illustration:hover {
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+}
+
+/* Floating animation for SVG elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scale pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations to SVG elements */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+  transform-origin: center;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-slide {
+  animation: slideIn 1s ease-out;
+}
+
+/* Optional: Navigation menu animation */
+nav li {
+  transition: transform 0.3s ease;
+}
+
+nav li:hover {
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   MEDIA QUERIES - MEDIUM SCREENS (TABLET)
+   =================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Container adjustments */
+  .container {
+    padding: 0 3rem;
+  }
+
+  /* Header - centered with horizontal alignment */
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  header img {
+    max-width: 120px;
+  }
+
+  nav ul {
+    gap: 1.25rem;
+  }
+
+  /* Hero section */
+  #hero {
+    padding: 4rem 0;
+  }
+
+  #hero h1 {
+    font-size: 2.75rem;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Work section - 2 column layout */
+  #work .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #work .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* About page - 2 column layout for skills */
+  #skills .col-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  /* Project cards */
+  .project-card {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Section spacing */
+  section {
+    margin-bottom: 4.5rem;
+  }
+
+  #connect {
+    padding: 4.5rem 0;
+  }
+}
+
+/* ===================================
+   MEDIA QUERIES - LARGE SCREENS (DESKTOP)
+   =================================== */
+@media (min-width: 1025px) {
+
+  /* Container adjustments */
+  .container {
+    padding: 0 4rem;
+  }
+
+  /* Header - centered with horizontal alignment */
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header img {
+    max-width: 150px;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  nav a {
+    font-size: 1.05rem;
+  }
+
+  /* Hero section - larger on desktop */
+  #hero {
+    padding: 6rem 0;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+
+  #hero p {
+    font-size: 1.35rem;
+    max-width: 800px;
+  }
+
+  /* Work section - 2 column layout for projects */
+  #work .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  #work .col {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+
+  /* About page - refined layout */
+  #about img {
+    max-width: 350px;
+  }
+
+  /* Skills section - 2 column layout */
+  #skills .col-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* 60/40 split available for desktop */
+  .col-60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .col-40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  /* Project overview on project pages - 3 columns */
+  #project-overview .col-3 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+
+  /* Typography - larger for desktop */
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.85rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  /* Project cards - enhanced spacing */
+  .project-card {
+    margin-bottom: 3rem;
+  }
+
+  .project-content {
+    padding: 2.5rem;
+  }
+
+  /* Section spacing */
+  section {
+    margin-bottom: 5rem;
+  }
+
+  #connect {
+    padding: 5rem 0;
+  }
+
+  #work {
+    padding: 5rem 0;
+  }
+
+  /* Footer spacing */
+  footer {
+    padding: 4rem 0;
+  }
+
+  /* Buttons - slightly larger on desktop */
+  .btn {
+    padding: 14px 36px;
+    font-size: 1.05rem;
+  }
+}
+
+/* ===================================
+   SMALL SCREENS (MOBILE) - Enhanced
+   =================================== */
+@media (max-width: 767px) {
+
+  /* Container */
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Header - stack on mobile */
+  header .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  header img {
+    max-width: 100px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
+
+  /* Hero section - mobile optimized */
+  #hero {
+    padding: 3rem 0;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  /* Work section - single column */
+  #work .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Typography - mobile sizes */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Project cards */
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  /* Section spacing - tighter on mobile */
+  section {
+    margin-bottom: 3rem;
+  }
+
+  #connect {
+    padding: 3rem 0;
+    margin: 3rem 0;
+  }
+
+  /* Buttons - mobile friendly */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2.5rem 0;
+  }
+
+  /* Social links - smaller on mobile */
+  .social-links svg {
+    width: 28px;
+    height: 28px;
+  }
+}
