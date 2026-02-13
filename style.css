@@ -811,19 +811,24 @@ nav li:hover {
     font-size: 1.2rem;
   }
 
-  /* Work section - projects stay stacked on tablet */
+  /* Work section - projects use 50/50 split on tablet */
   .project-row {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
   }
 
   .project-image,
   .project-content {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .project-image {
+    padding: 0;
   }
 
   .project-content {
-    padding: 2rem;
+    padding: 2.5rem;
   }
 
   /* About page - 2 column layout for skills */
