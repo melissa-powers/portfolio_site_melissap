@@ -270,7 +270,7 @@ picture img {
 }
 
 /* Responsive columns - stack on mobile */
-@media (width <= 767px) {
+@media (max-width: 767px) {
   .col-2,
   .col-3,
   .col-4 {
@@ -292,7 +292,7 @@ picture img {
   padding: 0 1rem;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
   .col-60,
   .col-40 {
     flex: 0 0 100%;
@@ -307,6 +307,7 @@ header {
   padding: 1.5rem 0;
   background-color: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: -webkit-sticky; /* Safari support */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -406,7 +407,7 @@ nav li {
 }
 
 /* Responsive hero text */
-@media (width <= 767px) {
+@media (max-width: 767px) {
   #hero {
     padding: 3rem 0;
   }
@@ -881,7 +882,7 @@ nav li:hover {
 /* ===================================
    MEDIA QUERIES - 641PX AND LARGER (HIDE HAMBURGER)
    =================================== */
-@media (width >= 641px) {
+@media (min-width: 641px) {
   /* Hide hamburger menu on larger screens */
   .hamburger-menu {
     display: none !important;
@@ -909,7 +910,7 @@ nav li:hover {
 /* ===================================
    MEDIA QUERIES - MEDIUM SCREENS (TABLET)
    =================================== */
-@media (width >= 768px) and (width <= 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   /* Container adjustments */
   .container {
     padding: 0 3rem;
@@ -1005,7 +1006,7 @@ nav li:hover {
 /* ===================================
    MEDIA QUERIES - LARGE SCREENS (DESKTOP)
    =================================== */
-@media (width >= 1025px) {
+@media (min-width: 1025px) {
   /* Container adjustments */
   .container {
     padding: 0 4rem;
@@ -1150,7 +1151,7 @@ nav li:hover {
 /* ===================================
    SMALL SCREENS (MOBILE) - Enhanced
    =================================== */
-@media (width <= 767px) {
+@media (max-width: 767px) {
   /* Container */
   .container {
     padding: 0 1.5rem;
