@@ -1,0 +1,27 @@
+{
+  "name": "melissa-powers-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Melissa Powers - UI/UX Designer",
+  "main": "index.html",
+  "scripts": {
+    "lint:html": "htmlhint '*.html'",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:js": "eslint 'js/**/*.js'",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "format": "prettier --write '**/*.{html,css,js,json}'"
+  },
+  "keywords": [
+    "portfolio",
+    "ux-design",
+    "ui-design"
+  ],
+  "author": "Melissa Powers",
+  "license": "ISC",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  }
+}
