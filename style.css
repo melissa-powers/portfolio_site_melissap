@@ -37,7 +37,7 @@
    TYPOGRAPHY
    =================================== */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
@@ -150,7 +150,7 @@ nav a:hover::after {
 .btn {
   display: inline-block;
   padding: 12px 32px;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
@@ -270,7 +270,7 @@ picture img {
 }
 
 /* Responsive columns - stack on mobile */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .col-2,
   .col-3,
   .col-4 {
@@ -292,7 +292,7 @@ picture img {
   padding: 0 1rem;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .col-60,
   .col-40 {
     flex: 0 0 100%;
@@ -406,7 +406,7 @@ nav li {
 }
 
 /* Responsive hero text */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   #hero {
     padding: 3rem 0;
   }
@@ -809,6 +809,7 @@ section {
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -819,6 +820,7 @@ section {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -829,6 +831,7 @@ section {
   0%, 100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
@@ -840,6 +843,7 @@ section {
     transform: translateX(-100px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -877,7 +881,7 @@ nav li:hover {
 /* ===================================
    MEDIA QUERIES - 641PX AND LARGER (HIDE HAMBURGER)
    =================================== */
-@media (min-width: 641px) {
+@media (width >= 641px) {
   /* Hide hamburger menu on larger screens */
   .hamburger-menu {
     display: none !important;
@@ -905,8 +909,7 @@ nav li:hover {
 /* ===================================
    MEDIA QUERIES - MEDIUM SCREENS (TABLET)
    =================================== */
-@media (min-width: 768px) and (max-width: 1024px) {
-
+@media (width >= 768px) and (width <= 1024px) {
   /* Container adjustments */
   .container {
     padding: 0 3rem;
@@ -1002,8 +1005,7 @@ nav li:hover {
 /* ===================================
    MEDIA QUERIES - LARGE SCREENS (DESKTOP)
    =================================== */
-@media (min-width: 1025px) {
-
+@media (width >= 1025px) {
   /* Container adjustments */
   .container {
     padding: 0 4rem;
@@ -1148,8 +1150,7 @@ nav li:hover {
 /* ===================================
    SMALL SCREENS (MOBILE) - Enhanced
    =================================== */
-@media (max-width: 767px) {
-
+@media (width <= 767px) {
   /* Container */
   .container {
     padding: 0 1.5rem;

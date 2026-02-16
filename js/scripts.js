@@ -1,4 +1,4 @@
-console.log("Welcome to Melissa Powers' Portfolio! 🌿 Crafting calm, user-centered experiences.");
+console.log('Welcome to Melissa Powers\' Portfolio! 🌿 Crafting calm, user-centered experiences.');
 
 // ===================================
 // MOBILE MENU TOGGLE
